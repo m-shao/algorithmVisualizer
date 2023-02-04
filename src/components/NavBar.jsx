@@ -1,6 +1,6 @@
 import {useState, React} from 'react'
 
-import DropdownMenu from './DropdownMenu.jsx'
+// import DropdownMenu from './DropdownMenu.jsx'
 
 import {inactiveNavIcons} from "../data/constants.js"
 import {activeNavIcons} from "../data/constants.js"
@@ -26,8 +26,9 @@ function NavBar() {
                     <img src={navActive? APlayIcon:IPlayIcon} alt="" className="w-12 my-5"/>
                     <h2 className='text-white text-2xl'>Play</h2>
                 </div>
-                <div className='flex items-center gap-6 pl-6'>
-                    <img src={navActive? ASliderIcon:ISliderIcon} alt="" className="w-12 my-5"/>
+                <div className={'flex items-center gap-6 pl-6 ' + (algorithmActive && "bg-black")} onClick={() => setAlgorithmActive(current => !current)}>
+
+                    <img src={navActive? ASliderIcon:ISliderIcon} alt="" className="w-12 my-5 "/>
                     <h2 className='text-white text-2xl'>Algorithms</h2>
                 </div>
 
