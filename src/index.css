@@ -3,6 +3,11 @@
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+
+*{
+  overflow:hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Inter', 'Roboto', 'Segoe UI', 'Oxygen',

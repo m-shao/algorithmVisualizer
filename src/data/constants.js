@@ -1,13 +1,27 @@
-import HamIcon from "../images/ham-icon.svg"
-import PlayIcon from "../images/play-icon.svg"
-import SliderIcon from "../images/slider-icon.svg"
-import SettingsIcon from "../images/settings-icon.svg"
-import DarkmodeIcon from "../images/darkmode-icon.svg"
+import IHamIcon from "../images/inactive-ham-icon.svg"
+import IPlayIcon from "../images/inactive-play-icon.svg"
+import ISliderIcon from "../images/inactive-slider-icon.svg"
+import ISettingsIcon from "../images/inactive-settings-icon.svg"
+import IDarkmodeIcon from "../images/inactive-darkmode-icon.svg"
 
-export let navIcons = {
-    "HamIcon": HamIcon,
-    "PlayIcon": PlayIcon,
-    "SliderIcon": SliderIcon,
-    "SettingsIcon": SettingsIcon,
-    "DarkmodeIcon": DarkmodeIcon
+import AHamIcon from "../images/active-ham-icon.svg"
+import APlayIcon from "../images/active-play-icon.svg"
+import ASliderIcon from "../images/active-slider-icon.svg"
+import ASettingsIcon from "../images/active-settings-icon.svg"
+import ADarkmodeIcon from "../images/active-darkmode-icon.svg"
+
+export let inactiveNavIcons = {
+    "IHamIcon": IHamIcon,
+    "IPlayIcon": IPlayIcon,
+    "ISliderIcon": ISliderIcon,
+    "ISettingsIcon": ISettingsIcon,
+    "IDarkmodeIcon": IDarkmodeIcon
+}
+
+export let activeNavIcons = {
+    "AHamIcon": AHamIcon,
+    "APlayIcon": APlayIcon,
+    "ASliderIcon": ASliderIcon,
+    "ASettingsIcon": ASettingsIcon,
+    "ADarkmodeIcon": ADarkmodeIcon
 }
