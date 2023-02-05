@@ -1,26 +1,26 @@
-import {React} from 'react'
+import {useState, React} from 'react'
 
 function DropdownMenu() {
+    const [dropdownActive, setdropdownActive] = useState(false)
+    const changeDropdown = () => setdropdownActive(current => !current)
 
     return(
-    <div class="relative inline-block text-left">
-        <div>
-            <button type="button" class="inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100" id="menu-button" aria-expanded="true" aria-haspopup="true">
-            <svg class="-mr-1 ml-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
-            </svg>
+    <div className='p-5'>
+        <div class="relative bg-neutral-800 p-5">
+            <button class="flex items-center text-xl leading-5 text-white hover:text-gray-300 transition ease-in-out duration-150" onClick={changeDropdown}>
+                Dropdown
+                <svg class="w-5 h-5 ml-2 -mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                </svg>
             </button>
         </div>
-
-
-        <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
-            <div class="py-1" role="none">
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Account settings</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-1">Support</a>
-            <a href="#" class="text-gray-700 block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">License</a>
-            <form method="POST" action="#" role="none">
-                <button type="submit" class="text-gray-700 block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
-            </form>
+        <div class={"absolute right-0 shadow-lg left-5 w-56 " + (dropdownActive ? "block" : "hidden")} >
+            <div class=" bg-neutral-800 shadow-xs">
+                <div class="py-1">
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-neutral-900 focus:outline-none transition ease-in-out duration-150" >Option 1</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-neutral-900 focus:outline-none transition ease-in-out duration-150">Option 2</a>
+                    <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-neutral-900 focus:outline-none transition ease-in-out duration-150">Option 3</a>
+                </div>
             </div>
         </div>
     </div>

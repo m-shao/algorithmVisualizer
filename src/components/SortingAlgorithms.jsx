@@ -21,7 +21,7 @@ function SortingAlgorithms({barCount}) {
 
   return (
     <>
-        <div className="w-full h-full box-content200 mt-5">
+        <div className="w-full h-full box-content200 mt-5 ">
             <ul className={"w-full h-full flex items-end " + (sortingArr.length > 35 ? "gap-1" : "gap-2")}>
               {sortingArr.map((length)=>
               <li style={{height:(length*10).toString().concat("%")}} 
