@@ -40,7 +40,7 @@ function NavBar() {
                         <img src={navActive? ASliderIcon:ISliderIcon} alt="" className="w-12 my-5"/>
                         <h2 className='text-white text-2xl'>Algorithms</h2>
                     </div>
-                    <div className={"bg-black w-64 h-64 absolute " + (algorithmActive ? "block" : "hidden")}>
+                    <div className={"bg-black w-64 h-80 absolute " + (algorithmActive ? "block" : "hidden")}>
                         <DropdownMenu/>
                     </div>
                 </div>
