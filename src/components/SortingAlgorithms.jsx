@@ -32,11 +32,12 @@ function bubbleSort(arr) {
   return newArr
 }
 
-// let arr = [5,4,3,2,1]
-// let newArr = bubbleSort(arr)
-// for (i=0; i<newArr.length; i++){
-//   console.log(newArr[i])
-// }
+//SUSSY
+let arr = [5,4,3,2,1]
+let newArr = bubbleSort(arr)
+for (i=0; i<newArr.length; i++){
+  console.log(newArr[i])
+}
 
 
   shuffleArray(sortingArr)
